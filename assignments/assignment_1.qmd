@@ -1,0 +1,38 @@
+---
+title: "XYZ -- Assignment 1: Topic of the Assignment"
+format:
+  html:
+    toc: true
+    self-contained: true
+    code-fold: true
+    df-print: paged
+    callout-appearance: simple
+    callout-icon: false
+---
+
+## Introduction
+
+The goal of this assignment is to XYZ.
+
+## Task  1: XYZ
+a. Create an XYZ.
+a. XYZ. 
+
+## Task 2: XYZ
+Using the XYZ from **Task 1**, add:
+
+a. XYZ.
+a. XYZ.
+a. XYZ.
+
+## Task 3: XYZ 
+Using the XYZ from **Task 1**, perform XYZ:
+
+a. XYZ.
+a. XYZ. 
+
+## Submission
+You need to submit a zip file that includes:
+
+1. A pdf file that reports and explains how you solved the tasks.
+1. An syntax file that contains all the research code for solving Task 3. The explanation of the code should be included in the report (the pdf file). 

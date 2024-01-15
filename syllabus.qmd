@@ -1,0 +1,101 @@
+---
+title: "XYZ: The Name Of Your Course"
+authors: 
+  - Your Name
+date: last-modified
+format: 
+  pdf:
+    toc: false
+    toc-depth: 2
+    documentclass: scrartcl
+    papersize: a4
+    number-sections: true
+    number-depth: 1
+    df-print: kable
+  html:
+    standalone: true
+    self-contained: true
+    toc: true
+    toc-depth: 2
+    number-depth: 1
+    number-sections: true
+    df-print: kable
+    embed-resources: true
+monofont: Fira Code
+urlcolor: blue
+mainfont: Arial
+sansfont: Arial
+---
+
+# Introduction
+
+This course covers XYZ. 
+
+The course consists of XYZ.
+
+## Prerequisites
+
+We assume that students who will join the course will have knowledge of XYZ
+
+## Objectives
+
+At the end of this course, students have attained the following objectives:
+
+- Know, explain, and apply XYZ.
+- Are able to XYZ.
+
+# Course Policy
+
+This course is worth XYZ ECTS, which means it is designed to give a full-time workload.
+
+## Weekly course flow
+A regular week in this course consists of XYZ lectures and XYZ lab sessions. 
+
+In the lectures, XYZ. In the labs, XYZ. 
+
+## Grading policy
+Your final grade in the course consists of the following parts:
+
+- Assignments (XYZ%).
+- Exam (XYZ%).
+
+To pass the course:
+
+- The final grade should be greater than or equal to 5.5.
+
+Resit:
+
+- If XYZ, then you are eligible for the resit. 
+
+
+# Course materials
+
+## Required software
+
+In this course, we will use XYZ.
+
+## Required readings
+
+Freely available sections from the following books:
+
+| Book   | Title (Authors)                                           | URL                                                                                                 |
+| ------ | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| XYZ | Book Title | [link text](https://www.github.com/hanneoberman/open_education_template/)                                                             |
+| XYZ | Book Title | [link text](https://www.github.com/hanneoberman/open_education_template/)                                                                     |
+
+And (parts of) the following references:
+
+- Oberman, H. (2024). Open Education Template. [github.com/hanneoberman/open_education_template](https://github.com/hanneoberman/open_education_template) (Original work published 2024)
+- Some other freely available articles & chapters
+
+# Class Schedule
+
+You can find the up-to-date class schedule with locations on [mytimetable.uu.nl](https://mytimetable.uu.nl).
+
+```{r}
+#| echo: false
+options(knitr.kable.NA = "")
+readxl::read_xlsx("course_schedule.xlsx") |> 
+  dplyr::mutate(Topic = ifelse(!is.na(URL), glue::glue("[{Title}]({URL})"), Title), .keep = "unused") |> 
+  dplyr::relocate(Topic, .after = Date)
+```

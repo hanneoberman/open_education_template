@@ -1,0 +1,37 @@
+---
+title: "XYZ -- Lab 1: Setup"
+format:
+  html:
+    toc: true
+    self-contained: true
+    code-fold: false
+    df-print: paged
+    callout-appearance: simple
+    callout-icon: false
+execute: 
+  eval: false
+---
+
+## Introduction
+
+During this lab, XYZ.
+
+## Software
+
+In this course, we will use `XYZ`.
+
+::: callout-note
+## `XYZ`
+
+To install `XYZ`:
+
+```
+$ XYZ
+```
+
+This command will execute XYZ.
+:::
+
+You have now installed `XYZ`.
+
+---

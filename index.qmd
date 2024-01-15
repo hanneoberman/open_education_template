@@ -1,0 +1,46 @@
+---
+title: "XYZ: The Name Of Your Course"
+format: 
+  gfm:
+    df-print: kable
+self-contained: true
+---
+
+This webpage contains all materials required for the course XYZ.
+
+The materials on this website are [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) licensed.
+
+![cc](https://mirrors.creativecommons.org/presskit/icons/cc.svg) ![by](https://mirrors.creativecommons.org/presskit/icons/by.svg)
+
+## Syllabus
+
+You can find the course syllabus as a web page [here](syllabus.html) or as a pdf [here](syllabus.pdf). The course schedule with required reading materials is in the syllabus as well, specifically [here](./syllabus#class-schedule).
+
+## Lectures
+```{r}
+#| echo: false
+readxl::read_xlsx("course_schedule.xlsx") |>
+  dplyr::mutate(Topic = ifelse(!is.na(URL), glue::glue("[{Title}]({URL})"), Title), .keep = "unused") |> 
+  dplyr::relocate(Topic, .after = Date) |> 
+  dplyr::filter(Type == "Lecture") |>
+  dplyr::select(Week, Date, Topic)
+```
+
+## Labs
+```{r}
+#| echo: false
+readxl::read_xlsx("course_schedule.xlsx") |>
+  dplyr::mutate(Topic = ifelse(!is.na(URL), glue::glue("[{Title}]({URL})"), Title), .keep = "unused") |> 
+  dplyr::filter(Type == "Lab") |>
+  dplyr::select(Week, Date, Topic)
+```
+
+## Deadlines
+```{r}
+#| echo: false
+readxl::read_xlsx("course_schedule.xlsx") |>
+  dplyr::mutate(Topic = ifelse(!is.na(URL), glue::glue("[{Title}]({URL})"), Title), .keep = "unused") |> 
+  dplyr::relocate(Topic, .after = Date) |> 
+  dplyr::filter(Type %in% c("Deadline", "Exam", "Resit")) |>
+  dplyr::select(Week, Date, Topic)
+```

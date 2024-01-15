@@ -1,0 +1,41 @@
+---
+title: "XYZ -- Lab 2: Execute code"
+format:
+  html:
+    toc: true
+    self-contained: true
+    code-fold: false
+    df-print: paged
+    callout-appearance: simple
+    callout-icon: false
+execute: 
+  eval: true
+params:
+  answers: true
+---
+
+## Introduction
+
+During this lab, XYZ.
+
+## Code execution
+
+With parameters (`params`) in Quarto, code chunks can be conditionally executed to create a version of the lab exercises with and without answers. 
+
+This is a code block.
+
+```{r}
+print("Hello world!")
+```
+
+With `params` we can suppress the visibility of code chunks. Changing the `answers: true` to `answers: false` hides a code block.
+
+```{.r .content-visible when-meta="params.answers"}
+1+1
+```
+
+Additional textual explanation can be provided in the answers too.
+
+:::{.content-visible when-meta="params.answers"}
+This text is hidden if `answers: false`.
+:::

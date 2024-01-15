@@ -1,0 +1,6 @@
+title: XYZ
+logo: /assets/img/logo.png
+description: Open Education Template
+theme: jekyll-theme-minimal
+github:
+    is_project_page: false
